@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+
+<h1>Классификация одежды</h1>
+<form action="/p_lab5" method="POST" enctype="multipart/form-data">
+    <p><input type="file" name="image" accept="image/*" required> Загрузите изображение одежды</p>
+    <input type="submit" class="form_btn" value="Классифицировать">
+</form>
+
+<h1>{{ class_model }}</h1>
+
+{% endblock %}
